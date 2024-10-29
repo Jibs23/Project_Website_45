@@ -1,0 +1,62 @@
+<!doctype html> <!-- Defines the document as an HTML.-->
+<html> <!-- Start of HTML.-->
+
+<head> <!-- meta-data that the user does not see.-->
+    <title> test </title>
+    <meta charset="utf-8"> <!-- character set, includes scandinavian characters-->
+    <meta name="viewport" content="width=device-width">
+</head>
+
+<body> <!-- The user-side viewable content.-->
+    <h1> Header text </h1>
+    <p> text, you can also make it <b>bold</b> or <i>italyc</i>. Click <a href="#duck">here</a> </a> to go to duck. </p>
+    <div style="background-color: rgb(161, 238, 238); border-radius: 20px; padding: 1%; border: 5px solid rgb(23, 47, 137);"> 
+        <ol> 
+            <li> The first thing</li>
+            <li> The second thing </li>
+            <li> The third thing </li>
+        </ol>
+
+        <ul> 
+            <li> Bullet 1 </li>
+            <li> Bullet 2 </li>
+            <li> Bullet 3 </li>
+        </ul>
+    </div>  
+    
+    <table style="border: 1px solid black">
+        <tr> 
+            <td> Mandag</td>
+            <td> Tirsdag</td>
+            <td> Onsdag</td>
+            <td> Torsdag </td>
+            <td> Fredag </td>
+        </tr>   
+        <tr> 
+            <td> Uge 1</td>
+            <td> Uge 2</td>
+            <td> Uge 3</td>
+            <td> Uge 4</td>
+        </tr>   
+    </table>
+        
+        <img src="Images\Duck.png" alt="A white duck standing in green grass" style="width: 300px;" id="duck">
+        
+        <p> link to <a href="https://www.youtube.com/watch?v=FveF-we6lcE"> Funny Video</a> </p> 
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/FveF-we6lcE?si=077TItNYtzMy1pw5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+       
+        <p> send me a <a href="mailto:test@gemail.com">Mail</a></p>
+        <p> This is my number <a href=tel:5552222>5552222</a></p>
+
+    <hr> <!-- horizontal line does not need a close-->
+    <form> 
+        <label> first name </label> <input type="text" value="your name here">
+        <label> last name </label> <input type="text" value="your name here, also">
+
+
+
+
+    </form>
+
+</body>
+</html> <!-- No HTML beyond this point!-->

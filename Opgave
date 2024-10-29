@@ -1,0 +1,27 @@
+<!doctype html> <!-- Defines the document as an HTML.-->
+<html> <!-- Start of HTML.-->
+
+<head> <!-- meta-data that the user does not see.-->
+    <title> opgave </title>
+    <meta charset_"uth-8"> <!-- character set, includes scandinavian characters-->
+</head>
+
+<body> <!-- The user-side viewable content.-->
+    <h1> Min første HTML opgave </h1>
+    <p> Denne opgave kræver at jeg replikere det her villede ved at bruge en række <b>tags/elementer</b> jeg lige har lært </p>
+    <hr> <!-- horizontal line does not need a close-->
+    <h2> Siden her indeholder:</h2>
+    <ul> 
+        <li> h1 </li>
+        <li> h2 </li>
+        <li> p </li>
+        <li> ul </li>
+        <li> li </li>
+        <li> hr </li>
+        <li> strong </li>
+    </ul>
+
+
+</body>
+
+</html> <!-- No HTML beyond this point!-->
