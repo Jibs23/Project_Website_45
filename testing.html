@@ -5,6 +5,16 @@
     <title> test </title>
     <meta charset="utf-8"> <!-- character set, includes scandinavian characters-->
     <meta name="viewport" content="width=device-width">
+    
+    <!-- applies style to whole document, using CSS -->
+    <style> 
+        table {
+            border: 1px solid black; border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid rgb(151, 151, 151)
+        }
+    </style>
 </head>
 
 <body> <!-- The user-side viewable content.-->
@@ -24,8 +34,9 @@
         </ul>
     </div>  
     
-    <table style="border: 1px solid black">
+    <table> <!-- weekday table-->
         <tr> 
+            <th></th>
             <td> Mandag</td>
             <td> Tirsdag</td>
             <td> Onsdag</td>
@@ -34,14 +45,40 @@
         </tr>   
         <tr> 
             <td> Uge 1</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+        </tr>   
+        <tr> 
             <td> Uge 2</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+        </tr>   
+        <tr> 
             <td> Uge 3</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+        </tr>   
+        <tr> 
             <td> Uge 4</td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
+            <td><input type="checkbox"></td>
         </tr>   
     </table>
-        
-        <img src="Images\Duck.png" alt="A white duck standing in green grass" style="width: 300px;" id="duck">
-        
+       
+        <img src="Images/Duck.png" alt="A white duck standing in green grass" style="width: 300px;" id="duck">
+       
         <p> link to <a href="https://www.youtube.com/watch?v=FveF-we6lcE"> Funny Video</a> </p> 
         <iframe width="560" height="315" src="https://www.youtube.com/embed/FveF-we6lcE?si=077TItNYtzMy1pw5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
        

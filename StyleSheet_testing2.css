@@ -1,0 +1,125 @@
+@charset "utf-8";
+body {
+    background-color: rgb(69, 81, 83);
+}
+body, p, h1, h2, h3, h4, h5, h6, a, span, div {
+    color: white;
+    font-family: sans-serif;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: "rubik wet paint", sans-serif;
+    font-weight: 400;
+}
+/* 
+STICKY CLASS
+ - position: -webkit-sticky; position: sticky; - Enables the sticky positioning.
+ - top: - Positions the element at the top of its container.
+ - padding: - Adds padding inside the element.
+ - background-color: - Sets the background color of the element.
+ - border: - Adds a solid border with a specified color around the element.
+*/
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    padding: 10px;
+    padding-bottom: 20px;
+    background-color: #2d363c;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    text-align: center;
+    border-bottom: 4px solid rgba(33, 32, 61, 0.487)
+}
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 30px;
+    border-color: white;
+    border-width: 2px;
+    border: solid;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#duck {
+    filter: hue-rotate(-50deg);
+    max-width: 300px;
+    animation: rotateDuck 2s linear infinite, flashColors 1s linear infinite;
+    border-radius: 500px;
+}
+
+@keyframes rotateDuck {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes flashColors {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    25% {
+        filter: hue-rotate(90deg);
+    }
+    50% {
+        filter: hue-rotate(180deg);
+    }
+    75% {
+        filter: hue-rotate(270deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+div {
+    background-color: #2d363c;
+    padding: 10px;
+    border-radius: 30px;
+    max-width: fit-content;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+:any-link {
+    color: rgb(255, 255, 141);
+    &:hover {
+        color: yellow;
+    }
+}
+ul {
+    list-style-type: none;
+}
+ul li::before {
+    content: '★';
+    color: rgb(255, 255, 255);
+    margin-right: 10px;
+}
+button {
+    background-color: #2d363c;
+    color: white;&:hover {
+        background-color: #556c7b;
+        color: yellow;
+    }
+    border: 2px solid white;
+    border-radius: 50px;
+    padding: 10px;
+    margin: 10px;
+    
+}
+blockquote {
+    background-color: #2d363c;
+    padding: 30px;
+    margin: 10px;
+    border-radius: 30px;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid white;
+}
+table, th, td {
+    border: 1px solid rgba(255, 255, 255, 0.314);
+}
