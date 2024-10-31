@@ -3,26 +3,61 @@
 <head> 
     <link rel="stylesheet" href="StyleSheet.css" type="text/CSS"> <!-- references stylesheet-->
     <title> Home Page </title>
-
+    <link rel="icon" href="../Images/logo.png" type="image/png">
 
 </head>
 
 <body>
-    <div id="site_name"> <!-- HEADER-->
-        <h1> Laurids J. hansen</h1> 
-        
-        <div id="nav_bar">
-            <button> portfolio </button>
-            <button> Projects </button>
-            <button> contact </button>
-            <button> Résumé </button>
+<!-- HEADER-->
+    <div id="header"> 
+        <h1 id="site_name"> Laurids J. hansen</h1> 
+        <div id="nav_bar" class="sticky">
+            <button onclick="location.href='index.html'"><u>portfolio</u></button>
+            <button onclick="location.href='projects.html'"> Projects </button>
+            <button onclick="location.href='contact.html'"> contact </button>
+            <button onclick="window.open('https://www.linkedin.com/in/lauridsjhansen/', '_blank')"> Résumé </button>
         </div>
     </div>
-<h1> portfolio </h1> 
 
-<div id="intro">
-    <img src="Project/Images/portrait.jpg" alt="Portrait of Laurids" id="Portrait">
+    <h1> portfolio </h1> <!-- Title of the page.-->
 
+<!-- INTRO BOX-->
+<div id="intro" class="box" class="responsive"> 
+    <img src="../Images/portrait.jpg" alt="Portrait of Laurids" id="Portrait">
+    <p> Laurids J. Hansen</p>
+    <p><strong>About me:</strong><br>
+        I’m a pixel-artist with experience designing and drawing up detailed scenes and characters.
+        Moreover; I dabble in several other creative fields.</p>
+    
+<!-- TABLE OF CONTENTS-->
+    <div id="Table of contents"> <h2> Skills </h2>
+        <ul>
+            <li> Pixel Art</li>
+        </ul>
+    </div>
+    
+</div>
+
+<br>
+<br>
+
+<!-- PIXEL ART -->
+<div id="pixel_art" class="box">
+    <h1>Pixel Art</h1>
+    <p>
+        I'm a pixel artist with experience designing and drawing up detailed scenes and characters.
+    </p>
+    <div class="gallery">
+        <div class="gallery-item">
+            <img src="../Images/goblin.png" alt="Pixel Art goblin">
+        </div>
+        <div class="gallery-item">
+            <img src="../Images/monkey.png" alt="Pixel Art monkey">
+        </div>
+        <div class="gallery-item">
+            <img src="../Images/soldier.gif" alt="Pixel Art soldier">
+        </div>
+    </div>
 </div>
 
 </body>
