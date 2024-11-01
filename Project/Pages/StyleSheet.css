@@ -67,11 +67,13 @@ button {
         position: relative;
         animation-fill-mode: forwards;
     }
-.burger-menu
-{
-    
-}
+
 /* NAVIGATION BAR & TITLE*/
+#site_name {
+    background-color: #32322d;
+    padding-top: 30px;
+
+}
 nav {
     border-radius: 0px;
     justify-content: center;
@@ -82,10 +84,103 @@ nav {
     text-align: center;
     background-color: #32322d;
     padding-bottom: 20px;
-    padding-top: 30px;
-    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.075);
-
+    box-shadow: 0px 10px 10px 5px rgba(0, 0, 0, 0.04);
+    display: flex;
+    nav{
+    background-color: #2d363c;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;    
 }
+.menu{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+.menu li {
+    color: white;
+    padding: 15px;
+}
+.menu-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+}
+/* BURGER MENU */
+.menu-icon, .menu-icon::before, .menu-icon::after{
+    display: block;
+    position: absolute;
+    background-color: aliceblue;
+    height: 4px;
+    width: 30px;
+    border-radius: 2px;
+    transition: transform 0.5s;
+}
+.menu-icon::before{
+    content: "";
+    margin-top: -8px;
+}
+.menu-icon::after{
+    content: "";
+    margin-top: 8px;
+}
+#menu-activate:checked + .menu-box .menu-icon::before{
+    margin-top: 0;
+    transform: rotate(45deg);
+}
+#menu-activate:checked + .menu-box .menu-icon::after{
+    margin-top: 0;
+    transform: rotate(-45deg);
+}
+#menu-activate:checked + .menu-box .menu-icon{
+    background-color: transparent;
+}
+
+#menu-activate {
+    display: none;
+}
+.menu-box {
+    display: none;
+}
+
+@media screen and (max-width: 700px) {
+    .menu-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 100%;
+    }
+    .menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-top: 75px;
+        background-color: #32322d;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+        #menu-activate ~ .menu button a {
+            height: 0;
+            margin: 0;
+            padding: 0;
+            transition: height 1s;
+            display: none;
+        }
+        #menu-activate:checked ~ .menu button a {
+            height: 50px;
+            margin: 0;
+            padding: 0;
+            transition: height 1s;
+        }
+}
+
 .box {
 /* BOX */
     display: flex;
