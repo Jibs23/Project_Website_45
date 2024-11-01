@@ -2,14 +2,14 @@
 <html> <!-- Start of HTML.-->
 <head> 
     <link rel="stylesheet" href="StyleSheet.css" type="text/CSS"> <!-- references stylesheet-->
-    <title> Home Page </title>
+    <title> Laurids J. Hansen - Portfolio </title>
     <link rel="icon" href="../Images/logo.png" type="image/png">
 
 </head>
 
 <body>
 <!-- HEADER-->
-    <div id="header"> 
+    <nav> 
         <h1 id="site_name"> Laurids J. hansen</h1> 
         <div id="nav_bar" class="sticky">
             <button onclick="location.href='index.html'"><u>portfolio</u></button>
@@ -17,30 +17,30 @@
             <button onclick="location.href='contact.html'"> contact </button>
             <button onclick="window.open('https://www.linkedin.com/in/lauridsjhansen/', '_blank')"> Résumé </button>
         </div>
-    </div>
+    </nav>
 
     <h1> portfolio </h1> <!-- Title of the page.-->
 
 <!-- INTRO BOX-->
-<div id="intro" class="box" class="responsive"> 
-    <img src="../Images/portrait.jpg" alt="Portrait of Laurids" id="Portrait">
-    <p> Laurids J. Hansen</p>
-    <p><strong>About me:</strong><br>
+<div id="intro" class="box"> 
+    <div>
+        <img src="../Images/portrait.jpg" alt="Portrait of Laurids" id="Portrait" class="portrait">
+        <p class="name">Laurids J. Hansen</p>
+    </div>    
+    <p class="about"><strong>About me:</strong><br>
         I’m a pixel-artist with experience designing and drawing up detailed scenes and characters.
         Moreover; I dabble in several other creative fields.</p>
     
-<!-- TABLE OF CONTENTS-->
-    <div id="Table of contents"> <h2> Skills </h2>
+    <!-- TABLE OF CONTENTS-->
+    <div class="toc"> 
+        <h2>Skills</h2>
         <ul>
-            <li> Pixel Art</li>
+            <li><a href="#pixel_art" onclick="document.getElementById('pixel_art').scrollIntoView({ behavior: 'smooth' }); return false;">Pixel Art</a></li>
         </ul>
     </div>
-    
 </div>
-
 <br>
 <br>
-
 <!-- PIXEL ART -->
 <div id="pixel_art" class="box">
     <h1>Pixel Art</h1>

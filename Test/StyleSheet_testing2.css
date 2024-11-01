@@ -1,0 +1,201 @@
+
+@charset "utf-8";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: rgb(69, 81, 83);
+}
+body, p, h1, h2, h3, h4, h5, h6, a, span, div {
+    color: white;
+    font-family: sans-serif;
+}
+h1,h2,h3,h4,h5,h6 {
+    font-family: "rubik wet paint", sans-serif;
+    font-weight: 400;
+}
+/* 
+STICKY CLASS
+ - position: -webkit-sticky; position: sticky; - Enables the sticky positioning.
+ - top: - Positions the element at the top of its container.
+ - padding: - Adds padding inside the element.
+ - background-color: - Sets the background color of the element.
+ - border: - Adds a solid border with a specified color around the element.
+*/
+.sticky {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0px;
+    padding: 10px;
+    padding-bottom: 20px;
+    background-color: #2d363c;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+    text-align: center;
+    border-bottom: 4px solid rgba(33, 32, 61, 0.487)
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 30px;
+    border-color: white;
+    border-width: 2px;
+    border: solid;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+#duck {
+    filter: hue-rotate(-50deg);
+    max-width: 300px;
+    animation: rotateDuck 2s linear infinite, flashColors 1s linear infinite;
+    border-radius: 500px;
+}
+
+@keyframes rotateDuck {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes flashColors {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+    25% {
+        filter: hue-rotate(90deg);
+    }
+    50% {
+        filter: hue-rotate(180deg);
+    }
+    75% {
+        filter: hue-rotate(270deg);
+    }
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}
+
+
+:any-link {
+    color: rgb(255, 255, 141);
+    &:hover {
+        color: yellow;
+    }
+}
+blockquote {
+    background-color: #2d363c;
+    padding: 30px;
+    margin: 10px;
+    border-radius: 30px;
+}
+table {
+    border-collapse: collapse;
+    width: 100%;
+    border: 2px solid white;
+}
+table, th, td {
+    border: 1px solid rgba(255, 255, 255, 0.314);
+}
+
+/* NAVIGATION BAR */
+nav{
+    background-color: #2d363c;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;    
+}
+.menu{
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+.menu li {
+    color: white;
+    padding: 15px;
+}
+.menu-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* BURGER MENU */
+.menu-icon, .menu-icon::before, .menu-icon::after{
+    display: block;
+    position: absolute;
+    background-color: aliceblue;
+    height: 4px;
+    width: 30px;
+    border-radius: 2px;
+    transition: transform 0.5s;
+}
+.menu-icon::before{
+    content: "";
+    margin-top: -8px;
+}
+.menu-icon::after{
+    content: "";
+    margin-top: 8px;
+}
+#menu-activate:checked + .menu-box .menu-icon::before{
+    margin-top: 0;
+    transform: rotate(45deg);
+}
+#menu-activate:checked + .menu-box .menu-icon::after{
+    margin-top: 0;
+    transform: rotate(-45deg);
+}
+#menu-activate:checked + .menu-box .menu-icon{
+    background-color: transparent;
+}
+
+#menu-activate {
+    display: none;
+}
+.menu-box {
+    display: none;
+}
+
+@media screen and (max-width: 700px) {
+    .menu-box {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 30px;
+        height: 100%;
+    }
+    .menu {
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin-top: 75px;
+        background-color: #2d363c;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+        #menu-activate ~ .menu li a {
+            height: 0;
+            margin: 0;
+            padding: 0;
+            transition: height 1s;
+            display: none;
+        }
+        #menu-activate:checked ~ .menu li a {
+            height: 50px;
+            margin: 0;
+            padding: 0;
+            transition: height 1s;
+        }
+}
