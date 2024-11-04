@@ -8,7 +8,7 @@ body {
     background-color: #272725;
     color: white;
     font-family: sans-serif;
-    font-size: larger
+    font-size: larger;
 }
 
 /* Headings */
@@ -40,17 +40,17 @@ img {
 :any-link {
     color: #fff79f;
 }
-    :any-link:hover {
-        color: #fffb00;
-        animation-name: hover_zoom;
-        animation-duration: 100ms;
-        position: relative;
-        animation-fill-mode: forwards;
-    }
+:any-link:hover {
+    color: #fffb00;
+    animation-name: hover_zoom;
+    animation-duration: 100ms;
+    position: relative;
+    animation-fill-mode: forwards;
+}
 
 /* Buttons */
 button {
-    background-color: #ff82b200;
+    background-color: rgba(255, 130, 178, 0);
     color: #fdff83;
     border: none;
     border-radius: 30px;
@@ -67,14 +67,11 @@ button {
         position: relative;
         animation-fill-mode: forwards;
     }
-.burger-menu
-{
-    
-}
 /* NAVIGATION BAR & TITLE*/
 #site_name {   
     background-color: #32322d;
-    padding-top: 10px;
+    padding-top: 30px;
+    font-size: 2em;
 }
 nav {
     border-radius: 0px;
@@ -82,12 +79,12 @@ nav {
     margin-top: 0px;
     margin-left: 0px;
     margin-right: 0px;
-    margin-bottom: 90px;
+    margin-bottom: 50px;
     text-align: center;
     background-color: #32322d;
     padding-bottom: 20px;
     padding-top: 30px;
-    box-shadow: 0px 16px 10px 5px rgba(0, 0, 0, 0.028);
+    box-shadow: 0 16px 10px 5px rgba(0, 0, 0, 0.028);
 
 }
 .box {
@@ -99,6 +96,7 @@ nav {
     align-content: center;
     flex-direction: row;
     max-width: 800px;
+    font-size: larger;
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.097);
 
     /* FORMATTING */
@@ -111,8 +109,8 @@ nav {
 }
 /* INTRO */
 #intro {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
     gap: 20px;
     max-width: 800px;
     margin: auto;
@@ -120,16 +118,11 @@ nav {
     border-radius: 30px;
     padding: 50px;
 }
-#intro {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto auto 1fr;
-    gap: 20px;
-    max-width: 800px;
-    margin: auto;
-    background-color: #32322d;
-    border-radius: 30px;
-    padding: 50px;
+#intro .portrait {
+    grid-column: 1 / 2;
+}
+#intro .about-me, #intro .skills {
+    grid-column: 2 / 3;
 }
 .name {
     text-align: center;
@@ -137,22 +130,38 @@ nav {
 }
 /* TABLE OF CONTENTS */
 .toc {
-    border: solid 5px #32322d;
-    border-radius: 30px;
     padding: 20px;
-    background-color: #272725;
-    
+    margin: auto;
 }
 .toc ul {
-    padding-left: 25%; /* Adjust the value as needed */
+    padding-left: 25%;
 }
 /* PORTRAIT */
 .portrait {
     max-width: 100%;
+    min-width: 100%;
     border-radius: 30px;
     padding-bottom: 0;
 }
-
+/* Responsive adjustments */
+@media screen and (max-width: 800px) {
+    #intro {
+        grid-template-columns: 1fr;
+    }
+    #intro .portrait, #intro .about-me, #intro .skills {
+        grid-column: 1 / -1;
+    }
+    .toc ul {
+        padding-left: 0;
+    }
+    #film-grid {
+        @media screen and (max-width: 800px) {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+    }
+}
 /* IMAGE GALLERY GRID */
 .gallery {
     display: grid;
@@ -166,13 +175,35 @@ nav {
     height: auto;
     object-fit: cover;
     border-radius: 5px;
+    image-rendering: pixelated;
 }
 .image-wide {
     width: 100%;
     max-width: 100%;
     grid-column: 1 / span 3;
 }
-
+/* FILM MAKING */
+.caption {
+    text-align: center;
+    font-size: 0.5em;
+    margin-bottom: 20px;
+    color: rgb(255, 255, 255);
+}
+.video-item {
+    flex: 1 1 calc(33.333% - 20px);
+    box-sizing: border-box;
+    text-align: center;
+}
+.video-item iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+}
+.flex-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
 /* RESPONSIVE */
 .responsive {
     max-width: 100%;
