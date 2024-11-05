@@ -17,16 +17,20 @@
             <button onclick="window.open('https://www.linkedin.com/in/lauridsjhansen/', '_blank')"> Résumé </button>
         </div>
     </nav>
-    <h1> Contact </h1> <!-- Title of the page.-->
-    <div id="contact" class="box">
+    <h1> Contact </h1> <!-- Title of the page.--> <br> <!-- TODO make portrait seemlessly fit-->
+    <img id="contact_Portrait" src="../Images/portrait.jpg" alt="Portrait of Laurids">
+    <div id="contact" class="box" style="display: flex; flex-direction: column; max-width: 500px;">
         <div>
-            <img src="../Images/portrait.jpg" alt="Portrait of Laurids" style="display: block; margin-left: auto; margin-right: auto; max-width: 300px;">
-            <p class="name">Laurids J. Hansen</p>
+            <h3 class="name">Laurids J. Hansen</h3> <br>
         </div> 
-        <div> 
-            <a href="mailto:contact@lauridsjhansen.com" >contact@lauridsjhansen.com</a>
-        </div>
-        </div>
+        <ul></ul>
+            <li><b>Email: </b><a href="mailto:laurids@example.com">laurids@example.com</a></li>
+            <li><B>LinkedIn: </B><a href="https://www.linkedin.com/in/lauridsjhansen/" target="_blank">lauridsjhansen</a></li>
+        </ul>
     </div>
-
+    <script>
+        window.onload = function() {
+            window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' });
+        };
+    </script>
 </body>    

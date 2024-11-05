@@ -87,8 +87,8 @@ nav {
     box-shadow: 0 16px 10px 5px rgba(0, 0, 0, 0.028);
 
 }
-.box {
 /* BOX */
+.box {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -228,4 +228,39 @@ nav {
         text-shadow: 0 2px 3px rgba(0, 0, 0, 0.471);
     }
 }
-/* JAVASCRIPT */
+#topBtn { /* TODO: make not blip into existence */
+    display: none; /* Hidden by default */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: -100px; /* Place the button 30px from the right */ /*! WHY DOES THIS NOT WORK? */
+    border: 4px, solid, #272725; /* Remove borders */
+    background-color: #32322d; /* Add a dark-grey background on hover */
+    cursor: pointer; /* Add a mouse pointer on hover */
+    border-radius: 100px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
+}
+#topBtn img {
+    border-radius: 0px;
+    filter:grayscale(100%);
+}    
+#topBtn:hover img {
+    filter: grayscale(0%);
+}
+#topBtn:hover {
+    border-color: #fdff83;
+    border-width: 4px;
+    border-style: solid;
+}
+#contact_Portrait {
+    display: block; 
+    margin-left: auto; 
+    margin-right: auto; 
+    max-width: 300px; 
+    border-radius: 500px;
+    box-shadow: 0 0 0 40px #32322d;
+}
+#contact div ul { /* TODO: fix list style */
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
