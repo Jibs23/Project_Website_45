@@ -1,0 +1,69 @@
+<!doctype html> <!-- Defines the document as an HTML.-->
+<html> <!-- Start of HTML.-->
+<head> 
+    <link rel="stylesheet" href="StyleSheet.css" type="text/CSS"> <!-- references stylesheet-->
+    <title> Laurids J. Hansen - FloraHive </title>
+    <link rel="icon" href="../Images/logo.png" type="image/png">
+</head>
+<body>
+<!-- HEADER-->
+    <h1 id="site_name"> Laurids J. hansen</h1> 
+    <nav> 
+        <div>
+            <button onclick="location.href='index.html'"> portfolio </button>
+            <button onclick="location.href='projects.html'"> <u>Projects</u> </button>
+        </div>
+        <div>
+            <button onclick="location.href='contact.html'"> contact </button>
+            <button onclick="window.open('https://www.linkedin.com/in/lauridsjhansen/', '_blank')"> Résumé </button>
+        </div>
+    </nav>
+<div class="box">
+    <h1> FloraHive</h1>
+    <p> 
+        I joined the FloraHive team, Stranded Ocean Games, in October of 2024. Around two years into its development. I was taken on as a pixel artist, and was given the opportunity to do a complete art pass for the game.
+    </p>
+    <div id="FloraHive-Screenshots">
+        <div>
+            <img src="/Project/Images/FloraHive_SS_OLD.png" alt="FloraHive Image 1">
+            <p>(Old Version)</p>
+        </div>
+        <div>
+            <img src="/Project/Images/FloraHive_Mockup.png" alt="FloraHive Image 2">
+            <p>(My New Version) (WIP)</p>
+        </div>
+    </div>
+<p>
+    The old version of the game had been downscaled to pixel art after the fact, and as such, was a bit rought around the edges.
+</p>
+</div>
+    <!-- RETURN TO TOP BUTTON -->  
+    <button id="topBtn" title="Go to top" onclick="topFunction()">
+        <img src="/Project/Images/icons/arrow_return.png" alt="top" >
+    </button>
+    <script>
+        // Get the button
+        var mybutton = document.getElementById("topBtn");
+    
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        function scrollFunction() {
+            if (document.body.scrollTop > 150 || document.documentElement.scrollTop > 150) {
+                mybutton.style.display = "block";
+                mybutton.style.transition = "right 0.5s ease-in-out";
+                mybutton.style.right = "10px";
+            } else {
+                mybutton.style.transition = "right 0.5s ease-in-out";
+                mybutton.style.right = "-100px";
+            }
+        }
+        // When the user clicks on the button, scroll to the top of the document smoothly
+        function topFunction() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script>
+</body>
+</html>
+    
+
+<!-- TODO: ADD RETURN TO PROJECTS BUTTON -->

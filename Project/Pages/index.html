@@ -11,10 +11,12 @@
     <!-- HEADER-->
     <h1 id="site_name"> Laurids J. hansen</h1> 
     <nav> 
-        <div id="nav_bar" class="sticky">
-            <button onclick="location.href='index.html'"><u>portfolio</u></button>
+        <div>
+            <button onclick="location.href='index.html'"> <u>portfolio</u> </button>
             <button onclick="location.href='projects.html'"> Projects </button>
-            <button onclick="location.href='contact.html'"> Contact </button>
+        </div>
+        <div>
+            <button onclick="location.href='contact.html'"> contact </button>
             <button onclick="window.open('https://www.linkedin.com/in/lauridsjhansen/', '_blank')"> Résumé </button>
         </div>
     </nav>
@@ -35,7 +37,7 @@
                 Moreover, I dabble in several other creative fields.</p>
                 <!-- TABLE OF CONTENTS-->
                 <div class="toc"> 
-                    <h2>Skills</h2>
+                    <h2>Skills</h2> 
                     <ul>
                         <li><a href="#pixel_art" onclick="document.getElementById('pixel_art').scrollIntoView({ behavior: 'smooth' }); return false;">Pixel Art</a></li>
                         <li><a href="#Film_making" onclick="document.getElementById('Film_making').scrollIntoView({ behavior: 'smooth' }); return false;">Film Making</a></li>
@@ -117,5 +119,4 @@
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 </script>
-
 </html>
