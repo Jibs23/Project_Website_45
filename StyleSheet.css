@@ -211,6 +211,10 @@ nav {
     nav {
         flex-direction: column;
     }
+    .responsive {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 /* ANIMATIONS */
@@ -267,22 +271,18 @@ nav {
     border-radius: 400px;
     border: 30px solid #32322d;
     z-index: 8; /* Ensure it is on top of other elements */
-    position: absolute;
-    top: 340px;
-    left: 50%;
-    transform: translateX(-50%);
+    position: relative;
+    box-shadow: 0px -19px 10px 0.1px rgba(0, 0, 0, 0.097);
 }
 #contact {
     box-shadow: none;
     display: flex; 
     flex-direction: column; 
     max-width: 500px;
-    min-width: 400px;
-    position:absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 490px;
+    position:relative;
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.097);
+    padding-top: -10px;
+    margin-top: -130px;
 }
 #contact div ul {
     list-style-type: none;
@@ -290,14 +290,21 @@ nav {
     margin: 0;
 }
 /* PROJECTS */
+.readmore {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
 
 /* FLORAHIVE */
 #FloraHive-Screenshots {
-    display: grid;
+    display: row;
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     justify-items: center;
     align-items: center;
+    max-width: 300px;
 }
 #FloraHive-Screenshots div {
     display: flex;
