@@ -268,33 +268,33 @@ nav {
     border-style: solid;
 }
 
-/* CONTACT */ /* TODO: Make navbar gell with elements of this page. Temp fix is to just make them absolute. */
+/* CONTACT */ 
 #contact_Portrait {
     display: block; 
     margin-left: auto; 
     margin-right: auto; 
     max-width: 200px; 
-    border-radius: 400px;
-    border: 30px solid #32322d;
+    border-radius: 400px; /* Make it a circle */
+    border: 30px solid #32322d; /* Add a border */
     z-index: 8; /* Ensure it is on top of other elements */
     position: relative;
     box-shadow: 0px -19px 10px 0.1px rgba(0, 0, 0, 0.097);
 }
 #contact {
-    box-shadow: none;
     display: flex; 
-    flex-direction: column; 
+    flex-direction: column; /* Stack the elements vertically in a column */
     max-width: 500px;
-    position:relative;
-    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.097);
+    position:relative; /* Make it relative to the parent (body) */
     padding-top: -10px;
-    margin-top: -130px;
+    margin-top: -130px; /* Margin in the negatives allows the portrait to occupy the same space */
+    box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.097);
 }
 #contact div ul {
-    list-style-type: none;
+    list-style-type: none; /* Remove bullet point dots */
     padding: 0;
     margin: 0;
 }
+
 /* PROJECTS */
 .readmore {
     display: flex;
