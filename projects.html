@@ -4,6 +4,7 @@
     <link rel="stylesheet" href="StyleSheet.css" type="text/CSS"> <!-- references stylesheet-->
     <title> Laurids J. Hansen - Projects </title>
     <link rel="icon" href="../Images/logo.png" type="image/png">
+    <meta name="viewport" content="width=device-width">
 </head>
 <body>
     <!-- HEADER-->
@@ -15,16 +16,16 @@
         </div>
         <div>
             <button onclick="location.href='contact.html'"> contact </button>
-            <button onclick="window.open('https://www.linkedin.com/in/lauridsjhansen/', '_blank')"> Résumé </button>
+            <a href="https://www.linkedin.com/in/lauridsjhansen/" target="_blank"><button>Resume</button></a>
         </div>
     </nav>
     <h1> Projects </h1> <!-- Title of the page.-->
-    <div class="box" id="FloraHive">
-        <h1> FloraHive</h1>
+    <div class="box" id="FloraHive" >
+        <h2> FloraHive</h2>
         <p> 
             I joined the FloraHive team, Stranded Ocean Games, in October of 2024. Around two years into its development. I was taken on as a pixel artist, and was given the opportunity to do a complete art pass for the game.
         </p>
-        <div id="FloraHive-Screenshots">
+        <div id="FloraHive-Screenshots" class="responsive">
             <div>
                 <img src="/Images/FloraHive_SS_OLD.png" alt="FloraHive Image 1">
                 <p>(Old Version)</p>
@@ -33,8 +34,8 @@
                 <img src="/Images/FloraHive_Mockup.png" alt="FloraHive Image 2">
                 <p>(My New Version) (WIP)</p>
             </div>
+            <p class="readmore"><a href="\P.FloraHive.html">Read more</a></p>
         </div>
-        <p><a href="\P.FloraHive.html">Read more</a></p>
     </div>
     <!-- RETURN TO TOP BUTTON -->  
     <button id="topBtn" title="Go to top" onclick="topFunction()">
@@ -78,7 +79,7 @@
             mybutton.style.right = "10px";
         } else {
             mybutton.style.transition = "right 0.5s ease-in-out";
-            mybutton.style.right = "-100px";
+            mybutton.style.right = "-140px";
         }
     }
     // When the user clicks on the button, scroll to the top of the document smoothly
